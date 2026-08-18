@@ -19,19 +19,28 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
+.full-page {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
     background: var(--white);
     color: var(--ink);
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+    display: block;
 }
 
 .wrap {
-    max-width: var(--max); 
-    margin: 0 auto; 
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
     padding: 0 28px;
+}
+
+.hero, .journey, section.block, .final, footer {
+    width: 100%;
 }
 
 /* ---------- HERO ---------- */
@@ -107,6 +116,10 @@ h1 em {
     margin: 0 auto 36px;
     position: relative;
     z-index: 1;
+}
+
+a {
+    font-family: 'Inter', sans-serif;
 }
 
 .cta {
@@ -250,12 +263,6 @@ p.body-text {
     margin-top: 32px;
 }
 
-@media (max-width:560px) {
-    .cards {
-        grid-template-columns: 1fr;
-    }
-}
-
 .card {
     background: var(--white);
     border: 1px solid var(--line);
@@ -371,6 +378,39 @@ footer a:hover {
 .reveal.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 640px) {
+    .wrap {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .journey {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .journey-track,
+    .journey-nodes {
+        width: 100%;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .full-page {
+        text-align: center;
+        padding: 0 20px;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {

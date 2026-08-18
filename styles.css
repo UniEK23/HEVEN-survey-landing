@@ -300,7 +300,7 @@ p.body-text {
 
 .founder-avatar {
     width: 52px; 
-    height:52px;
+    height: 52px;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
